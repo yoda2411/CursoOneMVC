@@ -1,0 +1,53 @@
+﻿@*@using Modules;*@
+
+@*@model Modules.Alumno*@
+@model List<Modelo.Alumno>
+@{ 
+    ViewBag.Title = "Alumno";
+    //List<Alumno> listAlum = ViewBag.Alumnos;
+}
+
+<h2 class="page-header">
+    Alumnos
+</h2>
+
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Nombre</th>
+              <th style="width:200px;">Sexo</th>
+              <th style="width:200px;">Fecha de nacimiento</th>
+              <th style="width:100px;"></th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach (var item in Model)
+          {
+          <tr>
+              <th>@string.Format("{0} {1}",item.Nombre,item.Apellido) </th>
+              <th>@string.Format("{0}", item.Sexo=="1"?"Hombre":"Mujer")</th>
+              <th>@item.FechaDeNacimiento</th>
+              <th>
+                 <a class="btn btn-xs btn-primary btn-block" href="~/home/GetById/@item.IdAlumno">Visualizar</a>
+              </th>
+          </tr>
+          }
+      </tbody>  
+  </table>
+
+@*@using (Html.BeginForm("Salve","Home",FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.Id)
+    @Html.LabelFor(x=>x.Nombre)
+    @Html.TextBoxFor(x=>x.Nombre,new { @class="form-control"})
+    <button type="submit" class="btn btn-primary">Sent</button>
+}*@
+
+@*<ul>
+    @foreach (var item in listAlum)
+    {
+    <li>
+        <b>Id= @item.Id </b><b>Nombre: @item.Nombre</b>
+    </li>       
+    }
+</ul>*@

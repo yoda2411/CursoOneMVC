@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppUno", "WebAppUno\WebAppUno.csproj", "{065234DC-C292-48AA-B040-0D1C21526361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules", "Modules\Modules.csproj", "{CD3139A5-BD73-4742-8A14-A44F2FB1FEE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{28134273-6F8F-43B1-875E-90D6B9AA11CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{065234DC-C292-48AA-B040-0D1C21526361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065234DC-C292-48AA-B040-0D1C21526361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065234DC-C292-48AA-B040-0D1C21526361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065234DC-C292-48AA-B040-0D1C21526361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3139A5-BD73-4742-8A14-A44F2FB1FEE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3139A5-BD73-4742-8A14-A44F2FB1FEE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3139A5-BD73-4742-8A14-A44F2FB1FEE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3139A5-BD73-4742-8A14-A44F2FB1FEE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28134273-6F8F-43B1-875E-90D6B9AA11CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28134273-6F8F-43B1-875E-90D6B9AA11CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28134273-6F8F-43B1-875E-90D6B9AA11CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28134273-6F8F-43B1-875E-90D6B9AA11CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {812DF6D3-0A2F-4683-A009-683906D408F6}
+	EndGlobalSection
+EndGlobal

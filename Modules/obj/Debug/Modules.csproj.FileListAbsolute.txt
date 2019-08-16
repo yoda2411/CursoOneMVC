@@ -1,0 +1,6 @@
+C:\CusosPracticas\CursoUno\WebAppUno\Modules\bin\Debug\Modules.dll
+C:\CusosPracticas\CursoUno\WebAppUno\Modules\bin\Debug\Modules.pdb
+C:\CusosPracticas\CursoUno\WebAppUno\Modules\obj\Debug\Modules.csprojAssemblyReference.cache
+C:\CusosPracticas\CursoUno\WebAppUno\Modules\obj\Debug\Modules.csproj.CoreCompileInputs.cache
+C:\CusosPracticas\CursoUno\WebAppUno\Modules\obj\Debug\Modules.dll
+C:\CusosPracticas\CursoUno\WebAppUno\Modules\obj\Debug\Modules.pdb
