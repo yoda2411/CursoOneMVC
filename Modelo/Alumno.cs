@@ -4,6 +4,7 @@ namespace Modelo
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
     using System.Data.Entity.Spatial;
     using System.Linq;
 
@@ -74,6 +75,49 @@ namespace Modelo
                 throw e;
             }
             return alum;
+        }
+
+        public void Salve()
+        {          
+            try
+            {
+                using (var ctx = new DBCursoContext())
+                {
+                    if (this.IdAlumno > 0)
+                    {
+                        ctx.Entry(this).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(this).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw ;
+            }
+           
+        }
+        public void Delected()
+        {
+            try
+            {
+                using (var ctx = new DBCursoContext())
+                {
+                    if (this.IdAlumno > 0)
+                    {
+                        ctx.Entry(this).State = EntityState.Deleted;
+                    }              
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
         }
     }
 }

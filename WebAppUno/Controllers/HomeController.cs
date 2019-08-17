@@ -26,11 +26,20 @@ namespace WebAppUno.Controllers
         {
             return View(dbctx.GetById(Id));
         }
-
-
-        public ActionResult Salve(mod.Alumno alum)
+        public ActionResult Salve(Alumno alumn)
+        {      
+          alumn.Salve();
+            return Redirect("~/Home/Alumno");
+        }
+        public ActionResult MtAlumno(int Id=0)
         {
-            return Redirect("~/Home/Index");
+            return View(Id==0?new Alumno(): dbctx.GetById(Id));
+        }
+        public ActionResult Eliminar(int Id=0)
+        {
+            dbctx.IdAlumno = Id;
+            dbctx.Delected();
+            return Redirect("~/Home/Alumno");
         }
     }
 }

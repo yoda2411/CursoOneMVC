@@ -17,24 +17,26 @@
               <th>Nombre</th>
               <th style="width:200px;">Sexo</th>
               <th style="width:200px;">Fecha de nacimiento</th>
-              <th style="width:100px;"></th>
+              <th style="width:200px;"></th>
           </tr>
       </thead>
       <tbody>
           @foreach (var item in Model)
           {
           <tr>
-              <th>@string.Format("{0} {1}",item.Nombre,item.Apellido) </th>
-              <th>@string.Format("{0}", item.Sexo=="1"?"Hombre":"Mujer")</th>
-              <th>@item.FechaDeNacimiento</th>
-              <th>
-                 <a class="btn btn-xs btn-primary btn-block" href="~/home/GetById/@item.IdAlumno">Visualizar</a>
-              </th>
+              <td>@string.Format("{0} {1}", item.Nombre, item.Apellido) </td>
+              <td>@string.Format("{0}", item.Sexo == "1" ? "Hombre" : "Mujer")</td>
+              <td>@item.FechaDeNacimiento</td>
+              <td>
+                  <a class="btn btn-xs btn-default" href="~/home/GetById/@item.IdAlumno">Visualizar</a>             
+                  <a class="btn btn-xs btn-primary" href="~/home/MtAlumno/@item.IdAlumno">Editar</a>            
+                  <a onclick="return confirm('¿Deseas eliminar este registro?')" class="btn btn-xs btn-danger" href="~/home/Eliminar/@item.IdAlumno">Eliminar</a>
+              </td>
           </tr>
           }
       </tbody>  
   </table>
-
+@*Abajo se muestra como diseñar un formulario usando Html Helper*@
 @*@using (Html.BeginForm("Salve","Home",FormMethod.Post))
 {
     @Html.HiddenFor(x=>x.Id)
