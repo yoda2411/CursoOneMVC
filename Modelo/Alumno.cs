@@ -96,7 +96,7 @@ namespace Modelo
             }
             catch (Exception e)
             {
-                throw ;
+                throw e ;
             }
            
         }

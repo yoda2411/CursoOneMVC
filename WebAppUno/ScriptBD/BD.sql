@@ -1,0 +1,59 @@
+﻿
+/****** Object:  Table [dbo].[Alumnos]    Script Date: 15/08/2019 22:29:20 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Alumnos](
+	[IdAlumno] [int] IDENTITY(1,1) NOT NULL,
+	[Nombre] [nvarchar](50) NULL,
+	[Apellido] [nvarchar](50) NULL,
+	[Sexo] [varchar](1) NULL,
+	[Edad] [datetime] NULL,
+ CONSTRAINT [PK_Alumnos] PRIMARY KEY CLUSTERED 
+(
+	[IdAlumno] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+
+
+
+/*Creado a manualmente*/
+CREATE TABLE Alumno(
+
+ IdAlumno INT IDENTITY (1,1) NOT NULL,
+ Nombre NVARCHAR (50) NOT NULL,
+ Apellido NVARCHAR(50) NOT NULL,
+ Sexo VARCHAR(1) NOT NULL,
+ FechaDeNacimiento DATETIME NOT NULL,
+ CONSTRAINT [PK_Alumno] PRIMARY KEY CLUSTERED ([IdAlumno] ASC)
+)
+
+CREATE TABLE Cuso(
+IdCurso INT IDENTITY(1,1) NOT NULL,
+Nombre NVARCHAR(50),
+CONSTRAINT [PK_Curso] PRIMARY KEY CLUSTERED ([IdCurso] ASC)
+)
+
+CREATE TABLE Adjunto
+(
+  IdAdjunto INT IDENTITY(1,1) NOT NULL,
+  IdAlumno INT NOT NULL,
+  Archivo VARBINARY NOT NULL,
+  CONSTRAINT [PK_Adjunto] PRIMARY KEY CLUSTERED ([IdAdjunto] ASC)
+)
+
+CREATE TABLE AlumnoCurso
+(
+  IdAlumnoCurso INT IDENTITY (1,1) NOT NULL,
+  IdAlumno INT NOT NULL,
+  IdCurso INT NOT NULL,
+  NOTA INT,
+  CONSTRAINT [PK_AlumnoCurso] PRIMARY KEY CLUSTERED ([IdAlumnoCurso] ASC)
+)

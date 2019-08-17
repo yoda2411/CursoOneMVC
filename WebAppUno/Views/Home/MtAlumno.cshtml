@@ -18,10 +18,12 @@
             <div class="form-group">
                 @Html.LabelFor(x=>x.Nombre)
                 @Html.TextBoxFor(x=>x.Nombre,new {@class="form-control" })
+                @Html.ValidationMessageFor(x=>x.Nombre,null,new { @class="label label-danger"})
             </div>
             <div class="form-group">
                 @Html.LabelFor(x=>x.Apellido)
                 @Html.TextBoxFor(x=>x.Apellido,new {@class="form-control"})
+                @Html.ValidationMessageFor(x=>x.Apellido,null,new { @class="label label-danger"})
             </div>
             <div class="form-group">
                 @Html.LabelFor(x=>x.Sexo)
@@ -33,6 +35,7 @@
             <div class="form-group">
                 @Html.LabelFor(x=>x.FechaDeNacimiento)
                 @Html.TextBoxFor(x=>x.FechaDeNacimiento,new {@class="form-control" })
+                @Html.ValidationMessageFor(x=>x.FechaDeNacimiento,null,new { @class="label label-danger"})
             </div>
         </div>
     </div>

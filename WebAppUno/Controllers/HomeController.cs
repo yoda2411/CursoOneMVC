@@ -27,9 +27,15 @@ namespace WebAppUno.Controllers
             return View(dbctx.GetById(Id));
         }
         public ActionResult Salve(Alumno alumn)
-        {      
-          alumn.Salve();
-            return Redirect("~/Home/Alumno");
+        {   if (ModelState.IsValid)
+            {
+                alumn.Salve();
+                return Redirect("~/Home/Alumno");
+            }
+            else
+            {
+                return View("~/Views/Home/MtAlumno.cshtml",alumn);
+            }          
         }
         public ActionResult MtAlumno(int Id=0)
         {
